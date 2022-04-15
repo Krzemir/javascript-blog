@@ -47,14 +47,15 @@ const optArticleSelector = '.post',
   optTitleListSelector = '.titles',
  optArticleTagsSelector = '.post-tags .list';
 
-function generateTitleLinks(){
+function generateTitleLinks(customSelector = ''){
   /* remove contents of titleList */
+  console.log('custom selector: ' , customSelector);
   const titleList = document.querySelector(optTitleListSelector);
   titleList.innerHTML = '';
 
   /* find all the articles and save them to variable: articles */
-  const articles = document.querySelectorAll(optArticleSelector);
-
+  const articles = document.querySelectorAll(optArticleSelector + customSelector);
+  console.log('article selected: ' , articles);
   let html = '';
 
   for(let article of articles){
