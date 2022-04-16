@@ -54,7 +54,7 @@ function generateTitleLinks(customSelector = ''){
 
   /* find all the articles and save them to variable: articles */
   const articles = document.querySelectorAll(optArticleSelector + customSelector);
-  console.log('wybrane art: ' , articles);
+  console.log('filtered titles: ' , articles);
 
   let html = '';
 
@@ -260,6 +260,7 @@ function authorClickHandler(event){
   }
 
   //execute function with author selector as argument
+
   generateTitleLinks('[data-author="' + author + '"]');
 
 }
