@@ -11,16 +11,6 @@ const opts = {
   authorsListSelector: '.authors.list'
 };
 
-/* const opts.articleSelector = '.post',
-  opts.titleSelector = '.post-title',
-  opts.titleListSelector = '.titles',
-  opts.articleTagsSelector = '.post-tags .list',
-  opts.articleAuthorSelector = '.post-author',
-  opts.tagListSelector = '.tags.list',
-  opts.cloudClassCount = 5,
-  opts.cloudClassPrefix = 'tag-size',
-  opts.authorsListSelector = '.authors.list'; */
-
 const titleClickHandler = function(event){
   event.preventDefault();
   const clickedElement = this;
@@ -51,8 +41,6 @@ const titleClickHandler = function(event){
   /* [DONE]add class 'active' to the correct article */
   selectedArticle.classList.add('active');
 };
-
-
 
 //------ Generate title links
 
@@ -117,7 +105,7 @@ function calculateTagClass(count, params){
 function generateTags(){
   /* [NEW] create a new variable allTags with an empty object */
   let allTags = {};
-  
+
   /* DONE find all articles */
   const articles = document.querySelectorAll('.post');
 
